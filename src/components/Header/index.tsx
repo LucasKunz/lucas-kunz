@@ -17,6 +17,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       <Information>
         <Menu>
           <Link href="/about">About</Link>
+          <Link href="/experience">Experience</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/contact">Contact</Link>
         </Menu>

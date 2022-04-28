@@ -2,7 +2,7 @@ const themeLight = {
   title: 'dark',
 
   colors: {
-    primary: '#0F0F0F',
+    primary: '#ffa500',
     secundary: '#BCABAE',
     
 

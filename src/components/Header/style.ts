@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   align-items: center;
-  background: ${props => props.theme.colors.primary};
+  background: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.text};
   display: flex;
   justify-content: space-around;
@@ -33,7 +33,7 @@ export const Menu = styled.ul`
     transition: .2s;
 
     &:hover {
-      filter: brightness(0.7);
+      color: ${props => props.theme.colors.primary};
       text-decoration: underline;
     }
   }
