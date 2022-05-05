@@ -4,13 +4,15 @@ export const Typing = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  width: 700px;
+  margin: 25px auto;
+  min-height: 100px;
+  overflow: hidden;
+  width: auto;
 
   h1 {
-    animation: typingText 5s steps(70) forwards;
+    animation: typingText 4s steps(70) forwards;
     color: #fff;
-    font-size: 55px;
+    font-size: 35px;
     font-weight: 100;
     max-width: 500px;
     position: relative;
@@ -24,9 +26,9 @@ export const Typing = styled.div`
 
     &::after {
       animation: text 0.6s infinite reverse;
-      animation-iteration-count: 7;
+      animation-iteration-count: 9;
       background-color: white;
-      bottom: 14px;
+      bottom: 9px;
       content: "";
       height: 50px;
       opacity: 0;
@@ -38,11 +40,12 @@ export const Typing = styled.div`
 
   p {
     animation: typingText 5s steps(70) forwards;
-    animation-delay: 5s;
+    animation-delay: 6s;
     color: #fff;
-    font-size: 36px;
+    font-size: 22px;
     font-weight: 100;
-    max-width: 320px;
+    max-width: 200px;
+    text-align: center;
     overflow: hidden;
     position: relative;
     width: 0px;
@@ -66,11 +69,12 @@ export const Typing = styled.div`
   
   .three {
     animation: fadeInUp 1.8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 10s;
     color: ${props => props.theme.colors.primary};
+    height: auto;
     font-weight: 100;
     display: inline-block;
-    font-size: 26px;
+    font-size: 20px;
     opacity: 0;
     transform: translate(-5px, 5rem);
   }
@@ -91,6 +95,45 @@ export const Typing = styled.div`
   @keyframes text {
     to {
       opacity: 0.8;
+    }
+  }
+
+  @media (min-width: 1024px) {  
+    margin-bottom: 150px;
+
+    h1 {
+      font-size: 55px;
+
+      &::after {
+        bottom: 14px;
+      }
+    }
+
+    p {
+      animation: typingText 5s steps(70) forwards;
+      animation-delay: 5s;
+      color: #fff;
+      font-size: 36px;
+      font-weight: 100;
+      max-width: 320px;
+      overflow: hidden;
+      position: relative;
+      width: 0px;
+      white-space: nowrap;
+
+
+      &::after {
+        animation: text 0.6s infinite reverse ease-in-out;
+        animation-delay: 4.2s;
+        background-color: white;
+        bottom: 5px;
+        content: "";
+        height: 33px;
+        opacity: 0;
+        position: absolute;
+        right: -1px;
+        width: 2px;
+      }
     }
   }
 `;

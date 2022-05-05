@@ -14,8 +14,14 @@ const Container = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 1250px;
+  overflow-x: hidden;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 `
 
 const Home: NextPage = () => {

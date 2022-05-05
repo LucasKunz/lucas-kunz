@@ -1,5 +1,4 @@
 import { Typing } from "./style";
-import Typewriter from "typewriter-effect";
 
 export default function TypeWrite() {
   return (
