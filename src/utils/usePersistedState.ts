@@ -10,7 +10,6 @@ function usePersistedState<T>(key: string, initialState: T): Response<T> {
 
     if (typeof window !== 'undefined') {
       const storageValue = localStorage.getItem(key);
-      console.log('Storage', storageValue)
       if (storageValue) {
         return JSON.parse(storageValue);
       } else {

@@ -9,6 +9,7 @@ const themeLight = {
     buttonActived: '#4A4A48',
 
     background: '#0F0F0F',
+    grayText: '#828282',
     text: '#FBFBFB'
   }
 }

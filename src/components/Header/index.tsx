@@ -1,21 +1,27 @@
 import React, { useContext } from "react";
 import { Container, Menu, Switch, Information, Hamburguer } from "./style";
-// import Switch from 'react-switch';
 import { ThemeContext } from "styled-components";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 let MOBILE_SCREEN = false;
 if (typeof window !== "undefined") {
   MOBILE_SCREEN = window.innerWidth < 768;
 }
 
-
+const listLinksMenu = [
+  { href: '/about', name: 'About'},
+  { href: '/experience', name: 'Experience'},
+  { href: '/projects', name: 'Projects'},
+  { href: '/contact', name: 'Contact'},
+]
 interface Props {
   toggleTheme: () => void;
 }
 
 const Header: React.FC<Props> = ({ toggleTheme }) => {
   const { title } = useContext(ThemeContext);
+  const { pathname } = useRouter();
 
   const handleMenu = () => {
     const elMenu = document.querySelector('.menu');
@@ -42,14 +48,19 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
   return (
     <Container>
-      <span>Portfolio </span>
+      <Link href='/' passHref>
+        <span>Portfolio </span>
+      </Link>
       <Information>
         {!MOBILE_SCREEN && (
           <Menu>
-            <Link href="/about">About</Link>
-            <Link href="/experience">Experience</Link>
-            <Link href="/projects">Projects</Link>
-            <Link href="/contact">Contact</Link>
+            {listLinksMenu.map((item, index) => {
+              return (
+                <Link href={item.href} key={index}>
+                  <a className={`${pathname == item.href ? 'active' : ''}`}>{item.name}</a>
+                </Link>
+              )
+            })}
           </Menu>
         )}
         <Switch>

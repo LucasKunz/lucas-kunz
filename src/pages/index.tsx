@@ -1,13 +1,10 @@
 import type { NextPage } from "next";
-import Header from "../components/Header";
-import usePersistedState from "../utils/usePersistedState";
 
-import GlobalStyle from "../styles/globals";
-import styled, { ThemeProvider } from "styled-components";
-import themeLight from "../styles/themes/light";
-import themeDark from "../styles/themes/dark";
+
+import styled from "styled-components";
 import TypeWrite from "../components/TypeWrite";
 import TextPortrait from "../components/TextPortrait";
+import Head from "next/head";
 
 
 const Container = styled.div`
@@ -25,20 +22,16 @@ const Container = styled.div`
 `
 
 const Home: NextPage = () => {
-  const [theme, setTheme] = usePersistedState("theme", themeDark);
-
-  const toggleTheme = () => {
-    setTheme(theme.title === "dark" ? themeLight : themeDark);
-  };
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Header toggleTheme={toggleTheme} />
+    <>
+      <Head>
+        <title>Lucas Kunz | Portifolio</title>
+      </Head>
       <Container>
         <TypeWrite />
         <TextPortrait />
       </Container>
-    </ThemeProvider>
+    </>
   );
 };
 

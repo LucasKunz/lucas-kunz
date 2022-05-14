@@ -15,11 +15,6 @@ export const ImageText = styled.div`
   
   transition: line-height 1.5s ;
 
-  &:hover {
-    line-height: 0.09;
-    letter-spacing: -4px;
-  }
-
   @keyframes lineHeight {
     0% {
       line-height: 1;
@@ -39,20 +34,25 @@ export const ImageText = styled.div`
     height: 700px;
     width: 700px;
 
+    &:hover {
+      line-height: 0.09;
+      letter-spacing: -4px;
+    }
+
     @keyframes lineHeight {
-    0% {
-      line-height: 0.09;
-      letter-spacing: -4px;
+      0% {
+        line-height: 0.09;
+        letter-spacing: -4px;
+      }
+      90% {
+        line-height: 0.09;
+        letter-spacing: -4px;
+      }
+      100% {
+        line-height: 1;
+        letter-spacing: unset;
+      }
     }
-    90% {
-      line-height: 0.09;
-      letter-spacing: -4px;
-    }
-    100% {
-      line-height: 1;
-      letter-spacing: unset;
-    }
-  }
   }
   
 `

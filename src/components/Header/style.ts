@@ -12,6 +12,7 @@ export const Container = styled.div`
   padding: 0 15px;
 
   span {
+    cursor: pointer;
     font-size: 24px;
   }
 
@@ -55,6 +56,10 @@ export const Menu = styled.ul`
     &:hover {
       color: ${(props) => props.theme.colors.primary};
       text-decoration: underline;
+    }
+    
+    &.active {
+      color: ${(props) => props.theme.colors.primary};
     }
   }
 
