@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Main, Text, Title } from "./styled";
+import { Main, Text, Title } from "./style";
 
 
 const Experiences = () => {
