@@ -14,6 +14,11 @@ export const Container = styled.div`
   span {
     cursor: pointer;
     font-size: 24px;
+    transition: .2s;
+
+    &:hover {
+      color: ${(props) => props.theme.colors.primary};
+    }
   }
 
   @media (min-width: 1024px) {
@@ -121,7 +126,7 @@ export const Switch = styled.div`
   }
   & .switch--shadow + label:before {
     right: 1px;
-    background-color: #f1f1f1;
+    background-color: #4A4A48;
     border-radius: 60px;
     transition: all 0.4s;
   }

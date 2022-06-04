@@ -1,15 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IconMedias, Main, SocialMedias, Text, Title } from "./style";
+import { Main, Text, Title, IconMedias, SocialMedias } from "./style";
 
 
-const About = () => {
+const Experiences = () => {
   return (
     <Main>
-      <Title>About me</Title>
-      <Text>Hello, my name is <b>Lucas Kunz</b>. I&apos;m 22 years old and live in Rio Grande do Sul, Brazil. I have been working in the IT area for a little over 1 year. Since I started, I have always worked with front-end web application development.</Text>
-      <Text> I started my journey in 2020, through <a href="https://www.growdev.com.br/">Growdev&apos;s</a> Starter program, 3rd edition, which trains full stack web developers. There, we learned from scrach, starting with HTML, CSS and Javascript, and moving on to React on the frontend Node on the backend. During the program, I started a degree in Systems Analysis and Development at the Cruzeiro do Sul University, where I finished in 2021. And currently, I am constantly studying and deepening my knowledge on <a href="https://www.rocketseat.com.br/">Rocketseat&apos;s</a> study platform</Text>
-
+      <Title>Contact</Title>
+      <Text>You can find me in the networks below. And if you want to know more information, feel free to send me a message.</Text>
       <SocialMedias>
         <div>
           <IconMedias>
@@ -46,7 +44,7 @@ const About = () => {
         <div>
 
         <IconMedias>
-        <Link href='https://github.com/LucasKunz' passHref>
+          <Link href='https://github.com/LucasKunz' passHref>
              <a target='_blank'>
               <Image src="/icons/logo-github.svg" alt="Ícone Github" width={25} height={25}/>
              </a>
@@ -59,4 +57,4 @@ const About = () => {
   )
 }
 
-export default About;
+export default Experiences;

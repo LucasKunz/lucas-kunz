@@ -9,9 +9,27 @@ export const Typing = styled.div`
   overflow: hidden;
   width: auto;
 
+  .typewriter {
+    &__name {
+      color: ${props => props.theme.colors.primary};
+    }
+
+    &__message {
+      animation: fadeInUp 1.8s ease forwards;
+      animation-delay: 8s;
+      color: ${props => props.theme.colors.primary};
+      height: 29px;
+      font-weight: 100;
+      display: inline-block;
+      font-size: 20px;
+      opacity: 0;
+      transform: translate(-5px, 5.1rem);
+    } 
+  }
+
   h1 {
     animation: typingText 4s steps(70) forwards;
-    color: #fff;
+    color: ${(props) => props.theme.colors.text};
     font-size: 35px;
     font-weight: 100;
     max-width: 500px;
@@ -19,10 +37,6 @@ export const Typing = styled.div`
     overflow: hidden;
     white-space: nowrap;
     width: 0px;
-
-    .name {
-      color: ${props => props.theme.colors.primary};
-    }
 
     &::after {
       animation: text 0.6s infinite reverse;
@@ -41,7 +55,7 @@ export const Typing = styled.div`
   p {
     animation: typingText 5s steps(70) forwards;
     animation-delay: 6s;
-    color: #fff;
+    color: ${(props) => props.theme.colors.text};
     font-size: 22px;
     font-weight: 100;
     max-width: 200px;
@@ -64,19 +78,6 @@ export const Typing = styled.div`
       right: -1px;
       width: 2px;
     }
-  }
-
-  
-  .three {
-    animation: fadeInUp 1.8s ease forwards;
-    animation-delay: 10s;
-    color: ${props => props.theme.colors.primary};
-    height: auto;
-    font-weight: 100;
-    display: inline-block;
-    font-size: 20px;
-    opacity: 0;
-    transform: translate(-5px, 5rem);
   }
 
   @keyframes fadeInUp {
@@ -112,7 +113,7 @@ export const Typing = styled.div`
     p {
       animation: typingText 5s steps(70) forwards;
       animation-delay: 5s;
-      color: #fff;
+      color: ${(props) => props.theme.colors.text};
       font-size: 36px;
       font-weight: 100;
       max-width: 320px;

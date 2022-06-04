@@ -12,7 +12,7 @@ if (typeof window !== "undefined") {
 const listLinksMenu = [
   { href: '/about', name: 'About'},
   { href: '/experience', name: 'Experience'},
-  { href: '/projects', name: 'Projects'},
+  // { href: '/projects', name: 'Projects'},
   { href: '/contact', name: 'Contact'},
 ]
 interface Props {
@@ -83,7 +83,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
           <Menu className="menu">
             <Link href="/about">About</Link>
             <Link href="/experience">Experience</Link>
-            <Link href="/projects">Projects</Link>
+            {/* <Link href="/projects">Projects</Link> */}
             <Link href="/contact">Contact</Link>
           </Menu>
         )}

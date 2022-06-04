@@ -29,3 +29,11 @@ export const Text = styled.p`
 export const Title = styled.h1`
   color: ${props => props.theme.colors.text} ;
 `
+
+export const Brand = styled.div`
+  background-color: #0F0F0F;
+  border-radius: 15px;
+  padding: 15px;
+  width: 120px;
+  margin: 0 auto;
+`
