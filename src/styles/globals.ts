@@ -6,6 +6,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-rendering: optimizeLegibility;
   }
   
   body {

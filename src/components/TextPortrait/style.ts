@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const ImageText = styled.div`
   animation: lineHeightMobile 12.5s forwards;
-  background: url('/perfil.png') no-repeat center;
+  background: url('/perfil.png') no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
-  background-size: cover;
+  background-size: contain;
   color: transparent;
   font-size: 13px;
   height: 380px;
@@ -32,10 +32,10 @@ export const ImageText = styled.div`
 
   @media (min-width: 1024px) {
     animation: lineHeight 12.5s;
-    height: 700px;
+    height: 600px;
     line-height: 1;
     letter-spacing: unset;
-    width: 700px;
+    width: 600px;
 
     &:hover {
       line-height: 0.09;
